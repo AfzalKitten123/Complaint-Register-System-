@@ -7,16 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.echo.complaintsystem.Fragments.ResolvedIndividualFragment;
-import com.echo.complaintsystem.Fragments.UnresolvedIndividualFragment;
+import com.echo.complaintsystem.Fragments.ResolvedResidentFragment;
+import com.echo.complaintsystem.Fragments.UnresolvedResidentFragment;
 import com.echo.complaintsystem.R;
 
-public class IndividualActivity extends Fragment {
+
+public class MainResidentFragment extends Fragment {
 
     private FragmentTabHost myTabHost;
 
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public MainResidentFragment() {
     }
 
     @Override
@@ -26,8 +26,8 @@ public class IndividualActivity extends Fragment {
         myTabHost = (FragmentTabHost) rootView.findViewById(android.R.id.tabhost);
 
         myTabHost.setup(getActivity(), getChildFragmentManager(), android.R.id.tabcontent);
-        myTabHost.addTab(myTabHost.newTabSpec("tab1").setIndicator("UnResolved"), UnresolvedIndividualFragment.class, null);
-        myTabHost.addTab(myTabHost.newTabSpec("tab2").setIndicator("Resolved"), ResolvedIndividualFragment.class, null);
+        myTabHost.addTab(myTabHost.newTabSpec("tab1").setIndicator("UnResolved"), UnresolvedResidentFragment.class, null);
+        myTabHost.addTab(myTabHost.newTabSpec("tab2").setIndicator("Resolved"), ResolvedResidentFragment.class, null);
 
         return rootView;
     }

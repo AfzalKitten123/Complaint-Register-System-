@@ -17,8 +17,9 @@ public class MainActivity extends AppCompatActivity {
         outTabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
 
         outTabHost.setup(this, getSupportFragmentManager(), android.R.id.tabcontent);
-        outTabHost.addTab(outTabHost.newTabSpec("tab1").setIndicator("Individual"), IndividualActivity.class, null);
-        outTabHost.addTab(outTabHost.newTabSpec("tab2").setIndicator("ResidentEntry"), ResidentActivity.class, null);
-        outTabHost.addTab(outTabHost.newTabSpec("tab3").setIndicator("Institutional"), InstituteActivity.class, null);
+        outTabHost.addTab(outTabHost.newTabSpec("tab1").setIndicator("Individual"), MainIndividualFragment.class, null);
+        outTabHost.addTab(outTabHost.newTabSpec("tab2").setIndicator("Resident"), MainResidentFragment.class, null);
+        outTabHost.addTab(outTabHost.newTabSpec("tab3").setIndicator("Institute"), MainInstituteFragment.class, null);
     }
 }
+

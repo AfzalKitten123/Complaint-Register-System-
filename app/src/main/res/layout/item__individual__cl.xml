@@ -46,16 +46,15 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="26-03-2016"
             android:id="@+id/createdDate_tv"
-            android:layout_marginTop="3dp"
-            android:layout_below="@+id/Complaint_tv"
-            android:layout_toEndOf="@+id/textView2"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:text="RESOLVE"
-            android:id="@+id/button2"
+            android:id="@+id/Item_I_Resolve_btn"
             android:background="@drawable/button_background"
             android:layout_marginEnd="33dp"
             android:layout_alignBottom="@+id/createdDate_tv"

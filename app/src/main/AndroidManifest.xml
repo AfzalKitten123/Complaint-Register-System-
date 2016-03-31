@@ -23,14 +23,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.MainActivity" />
-        <activity android:name=".Activities.IndividualActivity" />
-        <activity android:name=".Activities.ResidentActivity" />
-        <activity android:name=".Activities.InstituteActivity" />
+        <activity android:name=".Activities.MainIndividualFragment" />
+        <activity android:name=".Activities.MainResidentFragment" />
+        <activity android:name=".Activities.MainInstituteFragment" />
         <activity
             android:name=".Activities.CreateComplaint"
             android:label="@string/title_activity_create_complaint"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ComplaintInfo"></activity>
+        <activity android:name=".ComplaintInfo" />
+        <activity android:name=".RegistrationActivity"></activity>
     </application>
 
 </manifest>

@@ -32,9 +32,9 @@ public class IndividualRListAdapter extends ArrayAdapter<IndividualR_CLEntry> {
         if(myView==null)
             myView=myActivity.getLayoutInflater().inflate(R.layout.item_individual_r,parent,false);
         IndividualR_CLEntry individualR_clEntry=individualR_clEntries.get(position);
-        ((TextView)myView.findViewById(R.id.Number_tv)).setText(position);
-        ((TextView)myView.findViewById(R.id.Complaint_tv)).setText(individualR_clEntry.getComplaint());
-        ((TextView)myView.findViewById(R.id.createdDate_tv)).setText(individualR_clEntry.getResolvedDate());
+        ((TextView)myView.findViewById(R.id.)).setText(position);
+        ((TextView)myView.findViewById(R.id.)).setText(individualR_clEntry.getTitle());
+        ((TextView)myView.findViewById(R.id.)).setText(individualR_clEntry.getResolvedDate());
 
         return myView;
     }

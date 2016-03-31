@@ -7,16 +7,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.echo.complaintsystem.Fragments.ResolvedInstituteFragment;
-import com.echo.complaintsystem.Fragments.UnresolvedInstituteFragment;
+import com.echo.complaintsystem.Fragments.ResolvedIndividualFragment;
+import com.echo.complaintsystem.Fragments.UnresolvedIndividualFragment;
 import com.echo.complaintsystem.R;
 
-public class InstituteActivity extends Fragment {
+public class MainIndividualFragment extends Fragment {
 
     private FragmentTabHost myTabHost;
 
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public MainIndividualFragment() {
     }
 
     @Override
@@ -26,8 +25,8 @@ public class InstituteActivity extends Fragment {
         myTabHost = (FragmentTabHost) rootView.findViewById(android.R.id.tabhost);
 
         myTabHost.setup(getActivity(), getChildFragmentManager(), android.R.id.tabcontent);
-        myTabHost.addTab(myTabHost.newTabSpec("tab1").setIndicator("UnResolved"), UnresolvedInstituteFragment.class, null);
-        myTabHost.addTab(myTabHost.newTabSpec("tab2").setIndicator("Resolved"), ResolvedInstituteFragment.class, null);
+        myTabHost.addTab(myTabHost.newTabSpec("tab1").setIndicator("UnResolved"), UnresolvedIndividualFragment.class, null);
+        myTabHost.addTab(myTabHost.newTabSpec("tab2").setIndicator("Resolved"), ResolvedIndividualFragment.class, null);
 
         return rootView;
     }
